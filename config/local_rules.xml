@@ -1,0 +1,20 @@
+<group name="syscheck,sensible,">
+  <rule id="100100" level="12">
+    <if_sid>550</if_sid>
+    <field name="file" type="pcre2">(?i)sensible</field>
+    <description>CRITIQUE : fichier sensible modifié dans C:\Sensible</description>
+    <mitre><id>T1565.001</id></mitre>
+  </rule>
+  <rule id="100101" level="12">
+    <if_sid>553</if_sid>
+    <field name="file" type="pcre2">(?i)sensible</field>
+    <description>CRITIQUE : fichier sensible supprimé dans C:\Sensible</description>
+    <mitre><id>T1070.004</id></mitre>
+  </rule>
+  <rule id="100102" level="12">
+    <if_sid>554</if_sid>
+    <field name="file" type="pcre2">(?i)sensible.*\.ps1$</field>
+    <description>CRITIQUE : script PowerShell déposé dans C:\Sensible</description>
+    <mitre><id>T1105</id></mitre>
+  </rule>
+</group>
